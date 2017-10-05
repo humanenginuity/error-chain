@@ -253,7 +253,7 @@ macro_rules! impl_error_chain_processed {
 
         impl_error_chain_kind! {
             /// The kind of an error.
-            #[derive(Debug)]
+            #[derive(Clone, Copy, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
             pub enum $error_kind_name {
 
                 /// A convenient variant for String.
